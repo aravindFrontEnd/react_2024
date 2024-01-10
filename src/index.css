@@ -16,9 +16,9 @@ html {
   /* colors */
   --primary-100: #e2e0ff;
   --primary-200: #c1beff;
-  --primary-300: rgb(249, 149, 92);
+  --primary-300: #5cf9d2;
   --primary-400: #837dff;
-  --primary-500: rgb(252, 103, 16);
+  --primary-500: #1de9b6;
   --primary-600: #504acc;
   --primary-700: #3c3799;
   --primary-800: #282566;
@@ -175,7 +175,7 @@ ul {
 
 .btn {
   cursor: pointer;
-  color: var(--white);
+  color: var(--black);
   background: var(--primary-500);
   border: transparent;
   border-radius: var(--borderRadius);
@@ -407,10 +407,41 @@ Gallery
   }
 }
 
-.image-container.not-Found{
-  grid-template-columns: unset;
+.image-container.not-Found,
+.image-container.Loading
+{
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.image-container.not-Found img{
+.image-container.not-Found img,
+.image-container.Loading img
+{
   width: 100%;
 }
+
+
+.prev-btn,
+.next-btn
+{
+
+                    display: inline-block;
+                    outline: none;
+                    cursor: pointer;
+                    font-weight: 600;
+                    border-radius: 3px;
+                    padding: 12px 24px;
+                    border: 0;
+                    color: #000021;
+                    background: #1de9b6;
+                    line-height: 1.15;
+                    font-size: 16px;
+                    margin-right : 20px;
+
+
+}
+
+.next-btn:hover
+,.prev-btn:hover {
+                        transition: all .1s ease;
+                        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+                    }
