@@ -381,6 +381,7 @@ Gallery
 
 .image-container .img {
   height: 10rem;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
